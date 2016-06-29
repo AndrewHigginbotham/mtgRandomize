@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8" />
+    <title>Random Deck</title>
+    
+</head>
+<body>
+	<input type="button" onclick="location.href='{{color}}Deck/list';" value="Name List" />
+	{% for type in deck: %}
+		<ul>
+		{% for card in type: %}
+			<li>
+				Name: {{card.name}} type: {{card.types}} Mana Cost: {{card.cost}} 
+				<p> Card Text: {{card.text}}</p> 
+				{%for edition in card.editions %}
+					<ul>
+						<li>Set: {{edition.set}}</li>
+						<img src={{edition.image_url}} alt="Card Image">
+						<li><a href={{edition.store_url}}>Buy it!</a></li>
+					</ul><br>
+					{%endfor%}
+			</li>
+			{%endfor%}
+				
+		</ul>
+		{%endfor%}
+</body>
+</html>

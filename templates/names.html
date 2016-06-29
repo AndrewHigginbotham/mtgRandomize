@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8" />
+    <title>Random Deck</title>
+    
+</head>
+<body>
+	{% for type in deck: %}
+		<ul>
+		{% for card in type: %}
+			<li>
+				{{card.name}}
+			</li>
+			{%endfor%}
+				
+		</ul>
+		{%endfor%}
+</body>
+</html>
