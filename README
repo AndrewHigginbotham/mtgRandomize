@@ -1,0 +1,5 @@
+mtgRandomizer
+
+Uses a virtual enviroment: "env" with Flask installed.
+
+Run command: python randomDeck.py
